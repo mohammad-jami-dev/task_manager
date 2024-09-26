@@ -8,7 +8,8 @@ class ForgotPasswordEmailScreen extends StatefulWidget {
   const ForgotPasswordEmailScreen({super.key});
 
   @override
-  State<ForgotPasswordEmailScreen> createState() => _ForgotPasswordEmailScreenState();
+  State<ForgotPasswordEmailScreen> createState() =>
+      _ForgotPasswordEmailScreenState();
 }
 
 class _ForgotPasswordEmailScreenState extends State<ForgotPasswordEmailScreen> {
@@ -20,34 +21,35 @@ class _ForgotPasswordEmailScreenState extends State<ForgotPasswordEmailScreen> {
       body: SingleChildScrollView(
         child: ScreenBackground(
             child: Padding(
-              padding: const EdgeInsets.all(24),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const SizedBox(
-                    height: 128,
-                  ),
-                  Text(
-                    'Your Email Account',
-                    style:
-                    textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w600),
-                  ),
-                  Text('A 6 Digit Pin Will Be Sent To Your Email Address For Verification',
-                  style: textTheme.titleSmall?.copyWith(color: Colors.grey),
-                  ),
-                  const SizedBox(
-                    height: 24,
-                  ),
-                  _buildVerifyEmailForm(),
-                  const SizedBox(
-                    height: 48,
-                  ),
-                  Center(
-                    child: _buildHaveAccountSection(),
-                  ),
-                ],
+          padding: const EdgeInsets.all(24),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const SizedBox(
+                height: 128,
               ),
-            )),
+              Text(
+                'Your Email Account',
+                style:
+                    textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w600),
+              ),
+              Text(
+                'A 6 Digit Pin Will Be Sent To Your Email Address For Verification',
+                style: textTheme.titleSmall?.copyWith(color: Colors.grey),
+              ),
+              const SizedBox(
+                height: 24,
+              ),
+              _buildVerifyEmailForm(),
+              const SizedBox(
+                height: 48,
+              ),
+              Center(
+                child: _buildHaveAccountSection(),
+              ),
+            ],
+          ),
+        )),
       ),
     );
   }
@@ -73,7 +75,12 @@ class _ForgotPasswordEmailScreenState extends State<ForgotPasswordEmailScreen> {
   }
 
   void _onTapNextButton() {
-    Navigator.push(context, MaterialPageRoute(builder: (context) => const ForgotPasswordOtpScreen(),),);
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const ForgotPasswordOtpScreen(),
+      ),
+    );
   }
 
   Widget _buildHaveAccountSection() {

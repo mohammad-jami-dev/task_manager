@@ -21,34 +21,35 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
       body: SingleChildScrollView(
         child: ScreenBackground(
             child: Padding(
-              padding: const EdgeInsets.all(24),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const SizedBox(
-                    height: 128,
-                  ),
-                  Text(
-                    'Set Password',
-                    style:
-                    textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w600),
-                  ),
-                  Text('Minimum Number Of Password Should Be 8 Character',
-                    style: textTheme.titleSmall?.copyWith(color: Colors.grey),
-                  ),
-                  const SizedBox(
-                    height: 24,
-                  ),
-                  _buildResetPasswordForm(),
-                  const SizedBox(
-                    height: 48,
-                  ),
-                  Center(
-                    child: _buildHaveAccountSection(),
-                  ),
-                ],
+          padding: const EdgeInsets.all(24),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const SizedBox(
+                height: 128,
               ),
-            )),
+              Text(
+                'Set Password',
+                style:
+                    textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w600),
+              ),
+              Text(
+                'Minimum Number Of Password Should Be 8 Character',
+                style: textTheme.titleSmall?.copyWith(color: Colors.grey),
+              ),
+              const SizedBox(
+                height: 24,
+              ),
+              _buildResetPasswordForm(),
+              const SizedBox(
+                height: 48,
+              ),
+              Center(
+                child: _buildHaveAccountSection(),
+              ),
+            ],
+          ),
+        )),
       ),
     );
   }
@@ -61,7 +62,9 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
             hintText: 'Password',
           ),
         ),
-        const SizedBox(height: 8,),
+        const SizedBox(
+          height: 8,
+        ),
         TextFormField(
           decoration: const InputDecoration(
             hintText: 'Confirm Password',
@@ -84,7 +87,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
         MaterialPageRoute(
           builder: (context) => const SignInScreen(),
         ),
-            (route) => false);
+        (route) => false);
   }
 
   Widget _buildHaveAccountSection() {
@@ -116,6 +119,6 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
         MaterialPageRoute(
           builder: (context) => const SignInScreen(),
         ),
-            (route) => false);
+        (route) => false);
   }
 }
