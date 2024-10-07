@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:task_manager/ui/widget/tm_app_bar.dart';
-
 import '../widget/screen_background.dart';
 
 class ProfileScreen extends StatefulWidget {
